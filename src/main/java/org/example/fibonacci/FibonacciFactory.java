@@ -1,6 +1,13 @@
 package org.example.fibonacci;
 
 public class FibonacciFactory {
+    private static FibonacciFactory instance = new FibonacciFactory();
+
+    private FibonacciFactory() {}
+
+    public static FibonacciFactory getInstance() {
+        return instance;
+    }
 
     public Fibonacci produce(FibonacciType variant) {
         if (FibonacciType.RECURSIVE.equals(variant)) {

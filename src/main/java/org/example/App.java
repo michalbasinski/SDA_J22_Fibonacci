@@ -12,7 +12,7 @@ public class App {
         int n = 100000;
         FibonacciType variant = FibonacciType.ITERATIONAL;
 
-        FibonacciFactory factory = new FibonacciFactory();
+        FibonacciFactory factory = FibonacciFactory.getInstance();
         Fibonacci fibonacci = factory.produce(variant);
 
         BigDecimal result = fibonacci.findN(n);

@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class FibonacciFactoryTest {
 
-    final private FibonacciFactory factory = new FibonacciFactory();
+    final private FibonacciFactory factory = FibonacciFactory.getInstance();
 
     @Test
     public void shouldReturnFibonacciRecursive() {
